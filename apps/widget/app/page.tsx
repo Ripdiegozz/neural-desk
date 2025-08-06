@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-svh">
-      <p>apps/web</p>
+      <p>apps/widget</p>
       <Button className="my-4 bg-blue-600 text-white p-4" onClick={() => handleAddUser()}>
         Add User
       </Button>
