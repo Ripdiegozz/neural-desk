@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 import { OrganizationList } from '@clerk/nextjs';
 
-export const OrgSelecionView = () => {
+export const OrgSelectionView = () => {
   return (
     <OrganizationList afterCreateOrganizationUrl="/" afterSelectOrganizationUrl="/" hidePersonal skipInvitationScreen />
   );

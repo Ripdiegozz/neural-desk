@@ -3,7 +3,7 @@
 import React from 'react';
 import { useOrganization } from '@clerk/nextjs';
 import { AuthLayout } from '@/modules/auth/ui/layouts/auth-layout';
-import { OrgSelecionView } from '@/modules/auth/ui/views/org-select-view';
+import { OrgSelectionView } from '@/modules/auth/ui/views/org-select-view';
 
 const OrganizationGuard = ({ children }: { children: React.ReactNode }) => {
   const { organization } = useOrganization();
@@ -12,7 +12,7 @@ const OrganizationGuard = ({ children }: { children: React.ReactNode }) => {
   if (!organization) {
     return (
       <AuthLayout>
-        <OrgSelecionView />
+        <OrgSelectionView />
       </AuthLayout>
     );
   }
