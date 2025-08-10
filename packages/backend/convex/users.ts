@@ -18,6 +18,12 @@ export const add = mutation({
       throw new ConvexError('You are not authenticated!');
     }
 
+    const orgId = identity.orgId as string;
+
+    if (!orgId) {
+      throw new ConvexError('You are not part of an organization!');
+    }
+
     const userId = await ctx.db.insert('users', {
       name: `User ${Date.now()}`,
     });
