@@ -1,3 +1,4 @@
+import { ConvexError } from 'convex/values';
 import { query, mutation } from './_generated/server.js';
 
 export const getMany = query({
@@ -14,7 +15,7 @@ export const add = mutation({
     const identity = await ctx.auth.getUserIdentity();
 
     if (identity === null) {
-      throw new Error('You are not authenticated!');
+      throw new ConvexError('You are not authenticated!');
     }
 
     const userId = await ctx.db.insert('users', {
